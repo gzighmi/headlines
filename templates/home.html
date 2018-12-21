@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
-       <head>
+       <form>
+           <input type="text" name="publication" placeholder="news feed source" />
+           <input type="submit" value="Submit" />
+       </form>
+       <form>
+            <input type=""text" name="city" placeholder="Weather... city,country">
+           <input type="submit" value="search" />
+       </form>
+        <head>
            <title>Headlines</title>
        </head>
     <body>
         <h1>Headlines</h1>
+        <h2>Current Weather</h2>
+        <p>City: <b>{{weather.city}} | {{weather.country}}</b></p>
+        <p>{{weather.description}} | {{weather.temperature}}&#8451;</p
+        <h2>Headlines</h2>
         {% for article in articles %}
             <b><a href="{{article.link}}">{{article.title}}</a></b><br />
             <i>{{article.published}}</i><br />
